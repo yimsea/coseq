@@ -1,0 +1,24 @@
+---
+title: "*coseq* package instructions"
+author: "Andrea Rau"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{coseq}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+*coseq* is a package to perform clustering analysis of sequencing data (e.g., co-expression analysis 
+of RNA-seq data). The package implements both Gaussian and Poisson mixtures model, performs 
+parameter estimation using an expectation-maximization algorithm, and performs model selection 
+using either the Integrated Completed Likelihood (ICL) criterion or the slope heuristics approach.
+
+The full User's Guide for *coseq* may be found by installing the *coseq* package, loading it into an 
+R session, and typing:
+ 
+```{r, eval=FALSE}
+library(coseq)
+coseqUsersGuide()
+```
+at the R prompt to open the User's Guide in a pdf viewer.
