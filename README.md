@@ -1,5 +1,4 @@
-# coseq
-Co-Expression Analysis of Sequencing Data
+# coseq: Co-Expression Analysis of Sequencing Data
 
 Gaussian and Poisson mixture models are implemented to cluster biological
 entities (e.g., genes) from high-throughput sequencing data. Parameter estimation is
