@@ -2,10 +2,24 @@
 
 Authors: Andrea Rau and Cathy Maugis-Rabusseau
 
-Gaussian and Poisson mixture models are implemented to cluster biological
-entities (e.g., genes) from high-throughput sequencing data. Parameter estimation is
-performed using the EM algorithm and model selection criteria (to choose the number of clusters) are 
-provided. 
+Gaussian and Poisson mixture models are implemented to cluster gene expression profiles from high-throughput sequencing data. 
+Parameter estimation is performed using the EM algorithm and model selection criteria (to choose the number of clusters and
+data transformation) are provided. 
+
+A typical call to coseq to fit a Gaussian mixture model on arcsin- or logit-transformed normalized
+RNA-seq profiles takes the following form:
+```
+library(coseq)
+run_arcsin <- coseq(counts, K=2:10, model="Normal", transformation="arcsin")
+run_logit <- coseq(counts, K=2:10, model="Normal", transformation="logit")
+```
+where `counts` represents a (n×q) matrix or data frame of read counts for n genes in q samples
+and `K=2:10` provides the desired range of numbers of clusters (here, 2 to 10). We note that
+this function directly calls the [Rmixmod](https://cran.r-project.org/web/packages/Rmixmod/index.html) R package to fit Gaussian mixture models. 
+The output of the `coseq` function is an
+S3 object on which standard `plot` and `summary` functions can be directly applied; the former
+uses functionalities from the [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html) package. The option of parallelization
+via the [BiocParallel](https://bioconductor.org/packages/release/bioc/html/BiocParallel.html) Bioconductor package is also provided.
 
 ### Reference
 
