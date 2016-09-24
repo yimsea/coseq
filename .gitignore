@@ -1,5 +1,6 @@
 # Dev file
 dev.R
+.Rbuildignore
 
 # History files
 .Rhistory
