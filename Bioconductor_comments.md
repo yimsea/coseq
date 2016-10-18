@@ -2,7 +2,7 @@
 
 1. Avoid using 1:number for creating a sequence, use the more robust method of seq_len(number)
 
-2.Don’t overwrite / assign object names that are already function (i.e., I <- which(label == k)
+2. Don’t overwrite / assign object names that are already function (i.e., I <- which(label == k)
 
 3. Use descriptive argument name (rather than x use coseq)
 
@@ -33,12 +33,12 @@ based on is.null results.
 
 ### Vignette
 
-16. Could you provide a compilable vignette for the package? It would be better for users to be able to follow and run the functions that 
+1. Could you provide a compilable vignette for the package? It would be better for users to be able to follow and run the functions that 
 you provide in the package interactively.
 
 ### Structure
 
-17. It would be better to use available S4 structures for your class (i.e., using DataFrame instead of data.frame)
+1. It would be better to use available S4 structures for your class (i.e., using DataFrame instead of data.frame)
 
-18. You can combine related functions into one file.
+2. You can combine related functions into one file.
     I can't imagine that there are no Bioconductor classes/structures available for your use. We would prefer that you re-use any existing functionality.
